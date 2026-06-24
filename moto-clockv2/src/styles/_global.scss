@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
