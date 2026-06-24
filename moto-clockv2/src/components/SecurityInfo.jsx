@@ -17,7 +17,6 @@ const ConcertIcon = () => (
   </svg>
 );
 
-// --- Composant ---
 export const SecurityInfo = () => {
   const [activeTabCamping, setActiveTabCamping] = useState('allowed');
   const [activeTabConcert, setActiveTabConcert] = useState('allowed');
@@ -26,6 +25,7 @@ export const SecurityInfo = () => {
     <section className="security-section">
       <h2>Infos Pratiques</h2>
 
+      {/* SECTION CAMPING */}
       <h3 className="section-title"><CampingIcon /> Camping</h3>
       <div className="tabs-container">
         <div className="tab-buttons">
@@ -34,14 +34,37 @@ export const SecurityInfo = () => {
         </div>
         <div className="tab-content">
           {activeTabCamping === 'allowed' ? (
-            <ul><li>Tente, sac de couchage</li><li>Lampe frontale</li></ul>
+            <ul>
+              <li>Tentes, Matelas gonflables, Sacs de couchage</li>
+              <li>Glacières, Chaises de camping</li>
+              <li>Lampes torches et lanternes (non inflammables)</li>
+              <li>Couverts en plastique</li>
+              <li>Canettes, Gourdes</li>
+              <li>Bouteilles en plastique (sans alcool)</li>
+              <li>Caddies et chariots en toile</li>
+              <li>Nourriture</li>
+            </ul>
           ) : (
-            <ul><li>Feux de camp</li><li>Groupes électrogènes</li></ul>
+            <ul>
+              <li>Armes, Produits illicites ou dangereux</li>
+              <li>Feux d'artifice, explosifs, objets pyrotechniques</li>
+              <li>Barbecue, grills, réchauds à gaz, bouteilles de gaz</li>
+              <li>Générateurs, Enceintes, Mégaphones</li>
+              <li>Lasers, Drones, Objets tranchants, Rasoirs</li>
+              <li>Vélos, scooters, Casques</li>
+              <li>Outils (sauf maillets plastiques), Contenants en verre</li>
+              <li>Hampes rigides, Banderoles, Bougies, lampions</li>
+              <li>Aérosols, Selfie sticks, Instruments de musique</li>
+              <li>Appareils photo (sauf accréditation presse)</li>
+              <li>Symboles NSBM</li>
+              <li><strong>Animaux interdits sur tout le site</strong></li>
+            </ul>
           )}
         </div>
       </div>
 
-      <h3 className="section-title"><ConcertIcon /> Concerts</h3>
+      {/* SECTION CONCERT */}
+      <h3 className="section-title"><ConcertIcon /> Site Concert</h3>
       <div className="tabs-container">
         <div className="tab-buttons">
           <button className={activeTabConcert === 'allowed' ? 'active' : ''} onClick={() => setActiveTabConcert('allowed')}>✅ Autorisés</button>
@@ -49,9 +72,28 @@ export const SecurityInfo = () => {
         </div>
         <div className="tab-content">
           {activeTabConcert === 'allowed' ? (
-            <ul><li>Gourdes souples</li><li>Crème solaire</li></ul>
+            <ul>
+              <li>Petits sacs à dos et sacs à main</li>
+              <li>Crèmes solaires (lotion uniquement)</li>
+              <li>Déodorants à bille</li>
+              <li>Appareils photo compacts (sans objectifs amovibles)</li>
+              <li>Parapluies compacts (sans pointe)</li>
+              <li>Power banks</li>
+              <li>Gourdes</li>
+            </ul>
           ) : (
-            <ul><li>Objets tranchants</li><li>Appareils pro</li></ul>
+            <ul>
+              <li>Objets dangereux (tranchants, contondants, armes, pyrotechnie, etc.)</li>
+              <li>Outils, Marteaux, Masses, Maillets, Générateurs</li>
+              <li>Barbecue, grills, réchauds à gaz, bouteilles de gaz</li>
+              <li>Lasers, Drones, Rasoirs, Casques</li>
+              <li>Contenants en verre, Bouteilles, Alcool, Nourriture</li>
+              <li>Hampes rigides, Banderoles, Bougies, lampions, Mégaphones</li>
+              <li>Aérosols, Selfie sticks, Instruments de musique</li>
+              <li>Lamzacs (gonflables encombrant), Parapluies avec pointe</li>
+              <li>Trépieds (max 60x10cm)</li>
+              <li>Appareils photo (sauf accréditation), Symboles NSBM</li>
+            </ul>
           )}
         </div>
       </div>
