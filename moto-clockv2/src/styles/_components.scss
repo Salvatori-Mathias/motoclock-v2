@@ -71,6 +71,7 @@
     }
 }
 
+/* --- Menu Links mis à jour pour mobile --- */
 .menu-links {
     list-style: none;
     padding: 0;
@@ -78,15 +79,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 10px;
+    width: 100%;
+
+    li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
     li a {
+        display: block;
+        padding: 15px 40px;
+        width: 100%;
+        text-align: center;
         color: white;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: bold;
         text-transform: uppercase;
         text-decoration: none;
         transition: color 0.3s;
+        
         &:hover { color: var(--accent-color); }
     }
 }
@@ -156,46 +169,7 @@ h2 { color: white; text-align: center; margin-bottom: 20px; }
     }
 }
 
-/* --- Alertes Favoris --- */
-.reminders-container {
-    margin: 15px 15px; 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.reminder-alert {
-    background: #2d1e15; 
-    color: #ff9f43;      
-    padding: 15px;
-    border-radius: 12px;
-    border-left: 4px solid var(--accent-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    animation: slideDown 0.3s ease-out;
-}
-
-/* --- Animations --- */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.favorite-btn {
-    border: none; background: transparent; cursor: pointer; padding: 5px;
-    svg { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-}
-
-.concert-card.is-favorite .favorite-btn svg { transform: rotate(-30deg); }
-
-/* --- Survival Kit Styles --- */
+/* --- Survival Kit & Map --- */
 .survival-kit-container {
     padding: 20px;
     display: flex;
@@ -312,54 +286,21 @@ h2 { color: white; text-align: center; margin-bottom: 20px; }
     pointer-events: none;
 }
 
-.security-section {
-    padding: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    
-    .section-title {
-        color: var(--accent-color);
-        margin: 20px 0 10px 5px;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+/* --- Animations & Alertes --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.tabs-container {
-    background: #1e1e1e;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.05);
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    .tab-buttons {
-        display: flex;
-        button {
-            flex: 1;
-            padding: 16px;
-            border: none;
-            background: #2a2a2a;
-            color: #999;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            &.active { background: var(--accent-color); color: white; }
-            &:active { transform: scale(0.98); }
-        }
-    }
-
-    .tab-content {
-        padding: 20px;
-        color: #e0e0e0;
-        line-height: 1.6;
-        min-height: 150px;
-        ul { padding-left: 18px; margin: 0; li { margin-bottom: 10px; } }
-    }
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
 }
 
 .reminder-alert {
@@ -369,39 +310,9 @@ h2 { color: white; text-align: center; margin-bottom: 20px; }
     border-radius: 12px;
     border-left: 5px solid #ff9f43;
     display: flex;
-    align-items: center; /* Aligne verticalement l'icône et le texte */
+    align-items: center;
     gap: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     margin: 15px;
-}
-
-.alert-icon {
-    font-size: 24px;
-}
-
-.alert-text {
-    display: flex;
-    flex-direction: column; /* Empile le titre et le temps */
-    gap: 2px;
-}
-
-.alert-text strong {
-    font-size: 1.1rem;
-    color: white;
-}
-
-.alert-text span {
-    font-size: 0.85rem;
-    opacity: 0.8;
-}
-
-/* Effet "pulse" subtil pour attirer l'attention */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
-}
-
-.reminder-alert {
     animation: slideDown 0.4s ease-out, pulse 2s infinite;
 }
