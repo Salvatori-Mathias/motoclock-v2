@@ -1,9 +1,9 @@
   import { useState } from 'react';
-  import { Header } from './components/Layout/Header';
-  import { NavBar } from './components/Layout/NavBar';
-  import {ConcertList} from './components/Concerts/ConcertList'
-  import { MapViewer } from './components/Map/MapViewer';
-  import { SurvivalKitList } from './components/Kit/SurvivalKitList';
+  import { Header } from './components/layout/Header';
+  import { NavBar } from './components/layout/NavBar';
+  import {ConcertList} from './components/concerts/ConcertList'
+  import { MapViewer } from './components/map/MapViewer';
+  import { SurvivalKitList } from './components/kit/SurvivalKitList';
   import {SecurityInfo} from './components/SecurityInfo';
 
   function App() {
