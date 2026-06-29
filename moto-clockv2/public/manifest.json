@@ -3,13 +3,13 @@
   "name": "MOTO'CLOCK Festival App",
   "icons": [
     {
-      "src": "./assets/moto-icon.png",
+      "src": "/moto-icon.png", 
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#ed6c30",
   "background_color": "#121212"

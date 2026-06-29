@@ -5,6 +5,7 @@
   import { MapViewer } from './components/map/MapViewer';
   import { SurvivalKitList } from './components/kit/SurvivalKitList';
   import {SecurityInfo} from './components/SecurityInfo';
+  import './styles/main.scss';
 
   function App() {
     const [currentScreen, setCurrentScreen] = useState('planning');
