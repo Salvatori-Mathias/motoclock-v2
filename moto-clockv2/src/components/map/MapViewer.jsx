@@ -5,7 +5,7 @@ export const MapViewer = () => {
       <div className="map-container">
         {/* Assure-toi que le fichier est bien dans public/images/map.png */}
         <img 
-          src="/assets/plan.webp" 
+          src="/plan.webp" 
           alt="Plan du festival" 
           className="map-image"
         />

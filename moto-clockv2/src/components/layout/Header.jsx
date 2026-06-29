@@ -2,7 +2,7 @@ export const Header = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <header className="main-header">
       <div className="logo-container">
-        <img src="/assets/logo.webp" alt="MOTO'CLOCK" className="logo-img" />
+        <img src="/logo.webp" alt="MOTO'CLOCK" className="logo-img" />
         <h1>MOTO'CLOCK</h1>
       </div>
 
